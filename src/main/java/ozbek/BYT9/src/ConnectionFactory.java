@@ -27,12 +27,6 @@ public class ConnectionFactory {
     }
 
     public URLConnection createConnection() {
-        try {
-            URL url = new URL(urlString);
-            connection = url.openConnection();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         return this.connection;
     }
 

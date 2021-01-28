@@ -1,34 +1,44 @@
 package ozbek.BYT1112;
 
+import java.util.List;
+
 /**
- * created by ozbek on 2021-01-27
+ * created by ozbek
  */
 public class Patient extends Person{
     private int idPatient;
+    private List<Appointment> appointments;
+    private List<Treatment> treatments;
 
-    public Patient(int idPerson, String name, String surname, String address, String telephone, int idPatient) {
+    public Patient(int idPerson, String name, String surname, String address, String telephone) {
+        super(idPerson, name, surname, address, telephone);
+    }
+
+    public Patient(int idPerson, String name, String surname, String address, String telephone, int idPatient, List<Appointment> appointments, List<Treatment> treatments) {
         super(idPerson, name, surname, address, telephone);
         this.idPatient = idPatient;
+        this.appointments = appointments;
+        this.treatments = treatments;
     }
 
-    public String showPrescription() {
-        return "Prescription";
+    public Prescription showPrescription() {
+        return new Prescription();
     }
 
-    public String editAppointment() {
-        return "New appointment details";
+    public Appointment editAppointment() {
+        return new Appointment();
     }
 
-    public String createAppointment() {
-        return "New appointment details";
+    public Appointment createAppointment() {
+        return new Appointment();
     }
 
-    public String makePayment() {
-        return "Payment details";
+    public Appointment cancelAppointment() {
+        return new Appointment();
     }
 
-    public String cancelAppointment() {
-        return "Canceled appointment details";
+    public Bill makePayment() {
+        return new Bill();
     }
 
     public int getIdPatient() {
@@ -37,5 +47,21 @@ public class Patient extends Person{
 
     public void setIdPatient(int idPatient) {
         this.idPatient = idPatient;
+    }
+
+    public List<Appointment> getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(List<Appointment> appointments) {
+        this.appointments = appointments;
+    }
+
+    public List<Treatment> getTreatments() {
+        return treatments;
+    }
+
+    public void setTreatments(List<Treatment> treatments) {
+        this.treatments = treatments;
     }
 }

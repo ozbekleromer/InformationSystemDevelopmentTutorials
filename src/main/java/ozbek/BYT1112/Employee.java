@@ -3,12 +3,15 @@ package ozbek.BYT1112;
 import java.util.Date;
 
 /**
- * created by ozbek on 2021-01-27
+ * created by ozbek
  */
 public class Employee extends Person{
     private int idEmployee;
     private Date hireDate;
     private double salary;
+
+    public Employee() {
+    }
 
     public Employee(int idPerson, String name, String surname, String address, String telephone, int idEmployee, Date hireDate, double salary) {
         super(idPerson, name, surname, address, telephone);

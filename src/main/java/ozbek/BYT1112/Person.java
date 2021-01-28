@@ -1,7 +1,7 @@
 package ozbek.BYT1112;
 
 /**
- * created by ozbek on 2021-01-27
+ * created by ozbek
  */
 public class Person {
     private int idPerson;
@@ -9,6 +9,9 @@ public class Person {
     private String surname;
     private String address;
     private String telephone;
+
+    public Person() {
+    }
 
     public Person(int idPerson, String name, String surname, String address, String telephone) {
         this.idPerson = idPerson;

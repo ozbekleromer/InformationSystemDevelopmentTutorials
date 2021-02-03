@@ -10,6 +10,9 @@ public class Patient extends Person{
     private List<Appointment> appointments;
     private List<Treatment> treatments;
 
+    public Patient() {
+    }
+
     public Patient(int idPerson, String name, String surname, String address, String telephone) {
         super(idPerson, name, surname, address, telephone);
     }

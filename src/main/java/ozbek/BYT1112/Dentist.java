@@ -11,6 +11,9 @@ public class Dentist extends Employee{
     private Clinic clinic;
     private List<Treatment> treatments;
 
+    public Dentist() {
+    }
+
     public Dentist(int idPerson, String name, String surname, String address, String telephone, int idEmployee, Date hireDate, double salary) {
         super(idPerson, name, surname, address, telephone, idEmployee, hireDate, salary);
     }
